@@ -19,4 +19,9 @@ const data = {
 
 
 //convert to json string
-console.log(JSON.stringify(data));
+const jsonString = JSON.stringify(data);
+console.log(jsonString);
+
+//convert json string back to object
+const obj = JSON.parse(jsonString);
+console.log(obj);
