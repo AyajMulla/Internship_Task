@@ -24,4 +24,4 @@ console.log(jsonString);
 
 //convert json string back to object
 const obj = JSON.parse(jsonString);
-console.log(obj);
+console.log(obj.education.degree);
