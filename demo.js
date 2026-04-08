@@ -1,5 +1,5 @@
 // demo json
-const json = {
+const data = {
     "name": "ayaj",
     "surname": "mulla",
     "description": "null",
@@ -17,6 +17,6 @@ const json = {
     }
 }
 
-console.log(json);
 
-
+//convert to json string
+console.log(JSON.stringify(data));
