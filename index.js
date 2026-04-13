@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 
-
 app.use(express.json());
 
 let users = [
@@ -10,10 +9,16 @@ let users = [
     { id: 3, name: "Jane" }
 ];
 
+//middleware example
+app.use((req, res, next) => {
+    console.log(`${req.method} request to ${req.url}`); 
+    next();});
+
 // GET Users
 app.get("/users", (req, res) => {
   res.json(users);
 });
+
 
 async function getUsers() {
   const response = await fetch("http://localhost:3000/users");
